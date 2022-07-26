@@ -379,6 +379,7 @@ private extension PanModalPresentationController {
         }
         panContainerView.frame.origin.x = frame.origin.x
         presentedViewController.view.frame = CGRect(origin: .zero, size: adjustedSize)
+        presentedViewController.view.layoutIfNeeded()
     }
 
     /**
