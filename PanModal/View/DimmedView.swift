@@ -57,6 +57,9 @@ public class DimmedView: UIView {
 
     init(dimColor: UIColor = UIColor.black.withAlphaComponent(0.7)) {
         super.init(frame: .zero)
+        
+        accessibilityTraits = .button
+        accessibilityLabel = "Dismiss"
         alpha = 0.0
         backgroundColor = dimColor
         addGestureRecognizer(tapGesture)
