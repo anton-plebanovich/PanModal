@@ -524,7 +524,7 @@ private extension PanModalPresentationController {
                     transition(to: .shortForm)
 
                 } else {
-                    presentedViewController.dismiss(animated: view.window != nil)
+                    presentedViewController.dismiss(animated: true)
                 }
 
             } else {
@@ -542,7 +542,7 @@ private extension PanModalPresentationController {
                     transition(to: .shortForm)
 
                 } else {
-                    presentedViewController.dismiss(animated: view.window != nil)
+                    presentedViewController.dismiss(animated: true)
                 }
             }
         }
