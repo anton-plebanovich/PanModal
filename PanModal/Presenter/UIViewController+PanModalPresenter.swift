@@ -42,6 +42,7 @@ extension UIViewController: PanModalPresenter {
     public func presentPanModal(_ viewControllerToPresent: PanModalPresentable.LayoutType,
                                 sourceView: UIView? = nil,
                                 sourceRect: CGRect = .zero,
+                                animated: Bool = true,
                                 completion: (() -> Void)? = nil) {
 
         /**
@@ -59,7 +60,7 @@ extension UIViewController: PanModalPresenter {
             viewControllerToPresent.transitioningDelegate = PanModalPresentationDelegate.default
         }
 
-        present(viewControllerToPresent, animated: true, completion: completion)
+        present(viewControllerToPresent, animated: animated, completion: completion)
     }
 
 }

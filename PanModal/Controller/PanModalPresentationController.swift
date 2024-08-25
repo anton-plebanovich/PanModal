@@ -113,7 +113,7 @@ open class PanModalPresentationController: UIPresentationController {
         }
         view.didTap = { [weak self] _ in
             if self?.presentable?.allowsTapToDismiss == true {
-                self?.presentedViewController.dismiss(animated: true)
+                self?.presentedViewController.dismiss(animated: view.window != nil)
             }
         }
         return view
@@ -524,7 +524,7 @@ private extension PanModalPresentationController {
                     transition(to: .shortForm)
 
                 } else {
-                    presentedViewController.dismiss(animated: true)
+                    presentedViewController.dismiss(animated: view.window != nil)
                 }
 
             } else {
@@ -542,7 +542,7 @@ private extension PanModalPresentationController {
                     transition(to: .shortForm)
 
                 } else {
-                    presentedViewController.dismiss(animated: true)
+                    presentedViewController.dismiss(animated: view.window != nil)
                 }
             }
         }
